@@ -16,7 +16,10 @@
             //b) No
             #endregion
             #region Q4
-          //  b) Yes, interfaces can inherit from multiple interfaces
+            //  b) Yes, interfaces can inherit from multiple interfaces
+            #endregion
+            #region Q5
+            //  d) implements
             #endregion
             #endregion
         }
