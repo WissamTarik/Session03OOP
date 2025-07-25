@@ -82,16 +82,16 @@ namespace Assignment
             #endregion
 
             #region Q3
-            INotificationService notificationService;
-            notificationService = new EmailNotificationService();
-            notificationService.SendNotification("Wissam", "Hello :)");
-            notificationService=new SmsNotificationService();
-            Console.WriteLine();
-            notificationService.SendNotification("Ali", "Please call me back");
+            //INotificationService notificationService;
+            //notificationService = new EmailNotificationService();
+            //notificationService.SendNotification("Wissam", "Hello :)");
+            //notificationService=new SmsNotificationService();
+            //Console.WriteLine();
+            //notificationService.SendNotification("Ali", "Please call me back");
 
-            notificationService=new PushNotificationService();
-            Console.WriteLine();
-            notificationService.SendNotification("Omar", "See you soon");
+            //notificationService=new PushNotificationService();
+            //Console.WriteLine();
+            //notificationService.SendNotification("Omar", "See you soon");
             #endregion
             #endregion
 
