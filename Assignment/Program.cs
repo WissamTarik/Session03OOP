@@ -25,9 +25,12 @@
             //  a) Yes
             #endregion
             #region Q7
-           // a) Yes, for all members
+            // a) Yes, for all members
             #endregion
-                #endregion
-        }
+            #region Q8
+           // a) To hide the interface members from outside access
+        #endregion
+        #endregion
+    }
     }
 }
