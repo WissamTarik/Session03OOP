@@ -112,6 +112,20 @@ namespace Session03OOP
             //    Console.WriteLine(employee);   
             //}
             #endregion
+
+            #region Video04 Interface EX03
+            //Car car = new Car();
+            //car.Speed = 120;
+            //Console.WriteLine(car.Speed);
+            //car.Forward();
+            //Airplane airplane=new Airplane();
+
+            //IFlyable flyable=airplane;
+            //flyable.Forward();
+            //IMovable movable = airplane;
+            //movable.Forward();
+            #endregion
+
         }
     }
 }
