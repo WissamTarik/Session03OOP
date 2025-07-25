@@ -1,4 +1,5 @@
 ﻿using Session03OOP.Interface_Ex02;
+using Session03OOP.Session03OOP.Interface_Ex02;
 
 namespace Session03OOP
 {
@@ -202,6 +203,20 @@ namespace Session03OOP
             //Console.WriteLine();
             //Arr02[0].Append(" Amin");
             //Console.WriteLine($"Arr01[0]: {Arr01[0]}");
+            #endregion
+            #region Video06 IClonable
+            Employee E01 = new Employee() { Id = 1, Name = "Ahmed", Age = 30, Salary = 12000 };
+            Employee E02 = new Employee() { Id = 2, Name = "Amr", Age = 32, Salary = 11000 };
+
+            //E02 = E01;//Shallow copy
+            //E02 = (Employee)E01.Clone();//Deep Copy
+            //E02 = new Employee(E01);//Deep copy copy constructor
+            //E02 = (Employee)E01.Clone();
+            //Console.WriteLine(E01.GetHashCode());
+            //Console.WriteLine(E02.GetHashCode());
+            //E01.Salary = 5;
+            //Console.WriteLine(E01);
+            //Console.WriteLine(E02);
             #endregion
 
         }
