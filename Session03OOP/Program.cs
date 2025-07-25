@@ -125,6 +125,84 @@ namespace Session03OOP
             //IMovable movable = airplane;
             //movable.Forward();
             #endregion
+            #region Video05 Shallow Copy Vs Deep Copy
+            //Shallow Copy Vs Deep Copy
+
+
+            //int[] Arr01= { 1, 2, 3 };
+            //int[] Arr02= { 4,5,6 };
+            //Console.WriteLine($"Arr01: { Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr02: { Arr02.GetHashCode()}");
+            // /*Any object consisits of:
+            //  *1.Identity[Address]
+            //  *2.Object state[Data]
+            //  */
+
+            //Console.WriteLine();
+            //Arr02 = Arr01;//Shallow copy
+            ////{1,2,3}==>Has two references
+            ////{4,5,6}==>Is unreachable object
+            //Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+            //Arr01[0] = 100;
+            //Console.WriteLine($"Arr02[0]: {Arr02[0]}");
+            //int[] Arr01 = { 1, 2, 3 };
+            //int[] Arr02 = { 4, 5, 6 };
+            //Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+            //Console.WriteLine();
+            //Arr02 = (int[])Arr01.Clone();//Deep copy
+            ////CLone will clone the object state(Data) of caller
+            ////Assign the new object to Arr02 and genrate new IDENTITY
+            ////
+            //Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+            /*Ant object consists of:
+              1.Object state(data)
+              2.Identity(Address)
+             */
+            //Arr01[0] = 100;
+            //Console.WriteLine($"Arr02[0]: {Arr02[0]}");
+            //string[] Arr01 = { "Ahmed", "Omar", "Ali" };
+            //string[] Arr02 = { "Zyad", "Adel", "Amr" };
+            //Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+            //Console.WriteLine();
+
+            ////Arr02 = Arr01;//Shallow copy
+            //Arr02 = (string[])Arr01.Clone();
+            //Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+            //Console.WriteLine();
+            //Arr01[0] = "Ahmed Amin";
+            //Console.WriteLine($"Arr02[0]: {Arr02[0]}");
+
+            //StringBuilder[] Arr01 =
+            //{
+            //    new StringBuilder("Ahmed"),
+            //    new StringBuilder("Ali"),
+            //    new StringBuilder("Omar"),
+
+            //};
+            //StringBuilder[] Arr02 =
+            //{
+            //    new StringBuilder("Amr"),
+            //    new StringBuilder("Adel"),
+            //    new StringBuilder("Zyad"),
+
+            //};
+            //Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+            //Console.WriteLine();
+
+            //Arr02 = (StringBuilder[])Arr01.Clone();
+            //Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            //Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+            //Console.WriteLine();
+            //Arr02[0].Append(" Amin");
+            //Console.WriteLine($"Arr01[0]: {Arr01[0]}");
+            #endregion
 
         }
     }
