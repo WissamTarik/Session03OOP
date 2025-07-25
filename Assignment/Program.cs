@@ -28,9 +28,12 @@
             // a) Yes, for all members
             #endregion
             #region Q8
-           // a) To hide the interface members from outside access
-        #endregion
-        #endregion
+            // a) To hide the interface members from outside access
+            #endregion
+            #region Q9
+            //b) No, interfaces cannot have constructors
+             #endregion
+            #endregion
     }
     }
 }
