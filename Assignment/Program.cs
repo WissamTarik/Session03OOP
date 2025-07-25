@@ -1,4 +1,6 @@
-﻿namespace Assignment
+﻿using Assignment.Interfaces;
+
+namespace Assignment
 {
     internal class Program
     {
@@ -37,6 +39,37 @@
             //c) By separating interface names with commas
             #endregion
             #endregion
+            #region Part02
+            #region Q1
+            double X, Y, Radius;
+            do
+            {
+                Console.Write("Enter width of rectangle: ");
+            }
+            while (!double.TryParse(Console.ReadLine(), out X));
+            do
+            {
+                Console.Write("Enter height of rectangle: ");
+            }
+            while (!double.TryParse(Console.ReadLine(), out Y));
+            Console.WriteLine();
+            do
+            {
+                Console.Write("Enter radius of circle: ");
+            }
+            while (!double.TryParse(Console.ReadLine(), out Radius));
+
+            IShape shape = new Circle(Radius);
+            Console.WriteLine("Area of circle is: ");
+            shape.DisplayShapeInfo();
+            Console.WriteLine();
+            shape = new Rectangle(X, Y);
+            Console.WriteLine("Area of rectangle is: ");
+            shape.DisplayShapeInfo();
+            #endregion
+
+            #endregion
+
         }
     }
 }
