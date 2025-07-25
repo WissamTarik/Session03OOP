@@ -69,18 +69,30 @@ namespace Assignment
             #endregion
 
             #region Q2
-            IAuthenticationService authenticationService;
-            User user=new User() { Username="Wissam",Password="123",Role="Admin"};
-            BasicAuthenticationService basicAuthenticationService = new BasicAuthenticationService(user);
-            authenticationService = basicAuthenticationService;
-            Console.WriteLine($"is wissam authorized?:{authenticationService.AuthenticateUser("wissam","123")}");
-            Console.WriteLine($"is Ahmed authorized?:{authenticationService.AuthenticateUser("ahmed","123")}");
+            //IAuthenticationService authenticationService;
+            //User user=new User() { Username="Wissam",Password="123",Role="Admin"};
+            //BasicAuthenticationService basicAuthenticationService = new BasicAuthenticationService(user);
+            //authenticationService = basicAuthenticationService;
+            //Console.WriteLine($"is wissam authorized?:{authenticationService.AuthenticateUser("wissam","123")}");
+            //Console.WriteLine($"is Ahmed authorized?:{authenticationService.AuthenticateUser("ahmed","123")}");
 
-            Console.WriteLine();
-            Console.WriteLine($"Is wissam is admin?: {authenticationService.AuthorizeUser("Admin")}");
-            Console.WriteLine($"Is wissam is HR?: {authenticationService.AuthorizeUser("hr")}");
+            //Console.WriteLine();
+            //Console.WriteLine($"Is wissam is admin?: {authenticationService.AuthorizeUser("Admin")}");
+            //Console.WriteLine($"Is wissam is HR?: {authenticationService.AuthorizeUser("hr")}");
             #endregion
 
+            #region Q3
+            INotificationService notificationService;
+            notificationService = new EmailNotificationService();
+            notificationService.SendNotification("Wissam", "Hello :)");
+            notificationService=new SmsNotificationService();
+            Console.WriteLine();
+            notificationService.SendNotification("Ali", "Please call me back");
+
+            notificationService=new PushNotificationService();
+            Console.WriteLine();
+            notificationService.SendNotification("Omar", "See you soon");
+            #endregion
             #endregion
 
         }
