@@ -32,8 +32,11 @@
             #endregion
             #region Q9
             //b) No, interfaces cannot have constructors
-             #endregion
             #endregion
-    }
+            #region Q10
+            //c) By separating interface names with commas
+            #endregion
+            #endregion
+        }
     }
 }
