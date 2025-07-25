@@ -49,10 +49,13 @@ namespace Session03OOP
 
             public int CompareTo(object? obj)
             {
-                Employee employee = (Employee)obj;
-                if (this.Age > employee.Age) return 12;
-                else if (this.Age < employee.Age) return -12;
-                else return 0;
+                //Employee employee = (Employee)obj
+                Employee e = (Employee)obj;
+                //if (this.Age > employee.Age) return 12;
+                //else if (this.Age < employee.Age) return -12;
+                //else return 0;
+                //return this.Age.CompareTo(employee.Age);
+                return this.Name.Length.CompareTo(e.Name.Length);
             }
         }
     }
