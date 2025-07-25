@@ -14,7 +14,7 @@ namespace Session03OOP
 
     namespace Session03OOP.Interface_Ex02
     {
-        internal class Employee
+        internal class Employee : IComparable
         {
             public int Id { get; set; }
             public string Name { get; set; }
@@ -45,6 +45,14 @@ namespace Session03OOP
             {
                 return $"Id: {Id}, Name :{Name} , Age: {Age} , Salary: {Salary}"
                 ;
+            }
+
+            public int CompareTo(object? obj)
+            {
+                Employee employee = (Employee)obj;
+                if (this.Age > employee.Age) return 12;
+                else if (this.Age < employee.Age) return -12;
+                else return 0;
             }
         }
     }

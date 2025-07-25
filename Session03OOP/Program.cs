@@ -205,8 +205,8 @@ namespace Session03OOP
             //Console.WriteLine($"Arr01[0]: {Arr01[0]}");
             #endregion
             #region Video06 IClonable
-            Employee E01 = new Employee() { Id = 1, Name = "Ahmed", Age = 30, Salary = 12000 };
-            Employee E02 = new Employee() { Id = 2, Name = "Amr", Age = 32, Salary = 11000 };
+            //Employee E01 = new Employee() { Id = 1, Name = "Ahmed", Age = 30, Salary = 12000 };
+            //Employee E02 = new Employee() { Id = 2, Name = "Amr", Age = 32, Salary = 11000 };
 
             //E02 = E01;//Shallow copy
             //E02 = (Employee)E01.Clone();//Deep Copy
@@ -218,7 +218,26 @@ namespace Session03OOP
             //Console.WriteLine(E01);
             //Console.WriteLine(E02);
             #endregion
+            #region Video07  IComparable
+            Employee[] employees =
+                {
+                    new Employee(){Id=1,Name="Ahmed",Age=30,Salary=12000},
+                    new Employee(){Id=2,Name="Omar",Age=28,Salary=11000},
+                    new Employee(){Id=3,Name="Amr",Age=27,Salary=13000},
+                };
 
+            //Array.Sort(employees);
+            int X = employees[1].CompareTo(employees[0]);
+            //Positive:If the caller (employees[0] ) greater than the parameter(employees[1])
+            //Negative if the caller (employees[0]) less than the parameter (employees[1])
+            //Zero:If the caller (employees[0])is equal to the parameter(employees[1])
+            Console.WriteLine(X);
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine(employee);
+            }
+            #endregion
         }
+    }
     }
 }
