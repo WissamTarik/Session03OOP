@@ -41,31 +41,44 @@ namespace Assignment
             #endregion
             #region Part02
             #region Q1
-            double X, Y, Radius;
-            do
-            {
-                Console.Write("Enter width of rectangle: ");
-            }
-            while (!double.TryParse(Console.ReadLine(), out X));
-            do
-            {
-                Console.Write("Enter height of rectangle: ");
-            }
-            while (!double.TryParse(Console.ReadLine(), out Y));
-            Console.WriteLine();
-            do
-            {
-                Console.Write("Enter radius of circle: ");
-            }
-            while (!double.TryParse(Console.ReadLine(), out Radius));
+            //double X, Y, Radius;
+            //do
+            //{
+            //    Console.Write("Enter width of rectangle: ");
+            //}
+            //while (!double.TryParse(Console.ReadLine(), out X));
+            //do
+            //{
+            //    Console.Write("Enter height of rectangle: ");
+            //}
+            //while (!double.TryParse(Console.ReadLine(), out Y));
+            //Console.WriteLine();
+            //do
+            //{
+            //    Console.Write("Enter radius of circle: ");
+            //}
+            //while (!double.TryParse(Console.ReadLine(), out Radius));
 
-            IShape shape = new Circle(Radius);
-            Console.WriteLine("Area of circle is: ");
-            shape.DisplayShapeInfo();
+            //IShape shape = new Circle(Radius);
+            //Console.WriteLine("Area of circle is: ");
+            //shape.DisplayShapeInfo();
+            //Console.WriteLine();
+            //shape = new Rectangle(X, Y);
+            //Console.WriteLine("Area of rectangle is: ");
+            //shape.DisplayShapeInfo();
+            #endregion
+
+            #region Q2
+            IAuthenticationService authenticationService;
+            User user=new User() { Username="Wissam",Password="123",Role="Admin"};
+            BasicAuthenticationService basicAuthenticationService = new BasicAuthenticationService(user);
+            authenticationService = basicAuthenticationService;
+            Console.WriteLine($"is wissam authorized?:{authenticationService.AuthenticateUser("wissam","123")}");
+            Console.WriteLine($"is Ahmed authorized?:{authenticationService.AuthenticateUser("ahmed","123")}");
+
             Console.WriteLine();
-            shape = new Rectangle(X, Y);
-            Console.WriteLine("Area of rectangle is: ");
-            shape.DisplayShapeInfo();
+            Console.WriteLine($"Is wissam is admin?: {authenticationService.AuthorizeUser("Admin")}");
+            Console.WriteLine($"Is wissam is HR?: {authenticationService.AuthorizeUser("hr")}");
             #endregion
 
             #endregion
