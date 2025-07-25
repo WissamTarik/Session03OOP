@@ -238,6 +238,23 @@ namespace Session03OOP
             //    Console.WriteLine(employee);
             //}
             #endregion
+
+            #region Video08 IComparer
+            Employee[] employees =
+                {
+                    new Employee(){Id=1,Name="Ahmed",Age=30,Salary=12000},
+                    new Employee(){Id=2,Name="Omar",Age=28,Salary=11000},
+                    new Employee(){Id=3,Name="Amr",Age=27,Salary=13000},
+                };
+            //Array.Sort(employees, new EmployeeComparerSalary());
+            Array.Sort(employees, new EmployeeComparerNameLength());
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine(employee);
+            }
+
+
+            #endregion
         }
     }
     }

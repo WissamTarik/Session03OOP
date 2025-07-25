@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Session03OOP
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
@@ -14,6 +15,30 @@ namespace Session03OOP
 
     namespace Session03OOP.Interface_Ex02
     {
+        class EmployeeComparerSalary : IComparer
+        {
+            public int Compare(object? x, object? y)
+            {
+                Employee X=(Employee)x;
+                Employee Y=(Employee)y;
+                if (X.Salary > Y.Salary) return 1;
+                if (X.Salary < Y.Salary) return -1;
+                else return 0;
+                
+            }
+        }
+
+        class EmployeeComparerNameLength : IComparer
+        {
+            public int Compare(object? x, object? y)
+            {
+                Employee X = (Employee)x;
+                Employee Y = (Employee)y;
+                if (X.Name.Length > Y.Name.Length) return 1;
+                if (X.Name.Length < Y.Name.Length) return -1;
+                else return 0;
+            }
+        }
         internal class Employee : IComparable
         {
             public int Id { get; set; }
