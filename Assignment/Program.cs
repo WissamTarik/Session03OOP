@@ -21,6 +21,9 @@
             #region Q5
             //  d) implements
             #endregion
+            #region Q6
+            //  a) Yes
+            #endregion
             #endregion
         }
     }
