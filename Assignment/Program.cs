@@ -8,6 +8,10 @@
             #region Q1
             //b) To define a blueprint for a class
             #endregion
+
+            #region Q2
+            //b) protected
+            #endregion
             #endregion
         }
     }
