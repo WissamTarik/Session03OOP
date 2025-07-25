@@ -4,7 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Video01 Revision
+            //Class VS Struct
+            //Inheritance
+            //X-->Y
+            //Relationship betwwn classes
+            //Polymorphism(Overloading-overriding)
+            //Binding 
+            //1.Static binding ->New
+            //2.Dynamic binding ->override
+            #endregion
         }
     }
 }
