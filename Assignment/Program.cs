@@ -12,6 +12,9 @@
             #region Q2
             //b) protected
             #endregion
+            #region Q3
+            //b) No
+            #endregion
             #endregion
         }
     }
